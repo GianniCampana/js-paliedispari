@@ -17,8 +17,8 @@ console.log(word(parola_utente));
 
 function word (par_ut){
     var palindroma= "" ;
-    for(var i = par_ut.length - 1; i>=0; i-- ){
-        palindroma += par_ut[i];
+    for(var i = parola_utente.length - 1; i>=0; i-- ){
+        palindroma += parola_utente[i];
         if(parola_utente == palindroma){
             document.getElementById("res").innerHTML= parola_utente + " è palindroma: " + palindroma ;
         }else{
