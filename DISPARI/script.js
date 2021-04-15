@@ -1,25 +1,36 @@
 
 var pari_dispari = prompt("scegli tra pari e dispari");
 var numero_utente = parseInt(prompt("inserisci un numero da 1 a 5"));
+var num_pc = gioco(5);
+var somma = numero_utente + num_pc;
 
+console.log(num_pc);
+console.log(somma);
 
+console.log(checkPariDispari(somma))
 
-function gioco (num){
-    var numero_pc = Math.floor(Math.random() * 5) + 1;
-    var somma = numero_utente + numero_pc;
-    if(somma % 2==0 && pari_dispari == "pari"){
-        
-    }else if(somma % 2 == 0 && pari_dispari == "dispari"){
-        
-    }else if(somma % 2 !== 0 && pari_dispari == "dispari"){
-        
+console.log("il tuo numero è: " + numero_utente);
+console.log("il numero del pc è " + num_pc);
+console.log("la somma totale è: " + somma);
+
+if(pari_dispari == checkPariDispari(somma)){
+    console.log("hai vinto")
+}else{
+    console.log("hai perso");
+}
+
+function checkPariDispari(num){
+
+    if(num % 2 === 0){
+        return "pari"
     }else{
-        
+        return "dispari"
     }
-   
-   return num;
+}
+
+function gioco (max){
+    var num_random = Math.ceil(Math.random() * 5);
+    return num_random;
 }
 
 
-/* document.getElementById("res").innerHTML="HAI VINTO"
-document.getElementById("res").innerHTML="HAI PERSO" */
